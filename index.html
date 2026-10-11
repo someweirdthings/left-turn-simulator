@@ -10,28 +10,103 @@
 h1{font-size:clamp(28px,3vw,43px);letter-spacing:-.035em;line-height:1.06;margin:3px 0 13px}h2{font-size:19px;margin:0 0 4px;letter-spacing:-.02em} p{color:var(--muted);line-height:1.5;margin:0}.kicker{font-size:12px;color:#93bcff;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}.intro{max-width:960px;font-size:15px;margin-bottom:23px}
 .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:16px;align-items:start}.card{background:linear-gradient(155deg,#18263b 0%,#121e2e 100%);border:1px solid var(--border);border-radius:17px;box-shadow:0 10px 35px rgba(0,0,0,.14)} .controls{padding:19px 19px 16px;position:sticky;top:14px}.control{padding-top:19px}.control label{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13px;font-weight:600}.control output{color:white;font-variant-numeric:tabular-nums;font-size:14px}.sub{font-size:11px;margin:6px 0 0;color:#8da5bc}input[type=range]{width:100%;margin-top:14px;accent-color:#5daafa;cursor:pointer}input[type=range]::-webkit-slider-runnable-track{height:5px}.presets{display:flex;gap:6px;margin:13px 0 4px}.btn{border:1px solid #405b7c;background:#22334a;color:#edf4ff;border-radius:10px;padding:11px 12px;font-size:13px;font-weight:700;cursor:pointer;transition:background .15s}.btn:hover{background:#314962}.btn.primary{background:#247add;border-color:#459cf3}.btn.primary:hover{background:#2d8ff9}.btn:focus-visible,input:focus-visible{outline:2px solid #81bbff;outline-offset:2px}.btn.mini{padding:7px 9px;font-size:11px}.buttons{display:flex;gap:7px;margin-top:21px}.note{font-size:11px;color:#90a5c0;line-height:1.55;margin-top:17px}.column{min-width:0}.statusline{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap}.badge{font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid #3a5370;border-radius:999px;background:#17283d}.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}.graphs{display:grid;grid-template-columns:1fr 1fr;gap:13px}.intersection{padding:15px;overflow:hidden}.intersection header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.tag{font-size:11px;color:#bbcee6;border:1px solid #3c4f68;padding:5px 8px;border-radius:9px}.signal{display:flex;gap:6px;align-items:center;font-size:11px;color:#bdcde1}.lamp{width:12px;height:12px;border-radius:50%;background:#6b313a;box-shadow:inset 0 0 0 2px #7b3c45}.lamp.green{background:#3bea93;box-shadow:0 0 10px #2ff28880}svg.road{width:100%;aspect-ratio:1/1;display:block;border-radius:11px;background:#273542}.road text{font-family:inherit}.legend{display:flex;justify-content:space-between;gap:8px;font-size:12px;margin-top:12px}.legend strong{font-size:13px}.legend .a{color:#9bcbff}.legend .b{color:#ffb1a1}.tally{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #33465d;margin-top:13px;padding-top:13px;font-size:13px;color:#b9cbdb}.tally span strong{color:white;font-variant-numeric:tabular-nums}.mid-card{margin-top:15px;padding:18px 20px}.playhead{width:100%;accent-color:#80b8ff;margin:12px 0}.timeline{display:flex;justify-content:space-between;color:#9fb4ca;font-size:12px}.speed{display:flex;align-items:center;gap:10px;font-size:12px}.speed input{width:112px;margin:0}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:15px}.metric{padding:15px;min-width:0}.metric-label{font-size:11px;color:#a6bacf;min-height:32px}.metric-value{font-size:26px;letter-spacing:-.03em;font-weight:800;font-variant-numeric:tabular-nums;margin:5px 0}.metric-sub{font-size:11px;color:#97abbf;line-height:1.4}.metric .pair{display:flex;justify-content:space-between;gap:6px;flex-wrap:wrap}.us{color:#85c3ff}.tr{color:#f4a79a}.chart{padding:19px;margin-top:15px}.charthead{display:flex;justify-content:space-between;align-items:start;gap:15px;flex-wrap:wrap}.chart h2{margin-bottom:4px}.chart svg{display:block;width:100%;height:auto;max-height:275px;margin-top:11px}.line-legend{display:flex;gap:13px;align-items:center;font-size:12px;color:#bacde1}.line-legend i{display:inline-block;width:18px;height:4px;border-radius:4px;vertical-align:middle;margin-right:5px}.foot{margin-top:15px;font-size:12px;color:#9db3c7;line-height:1.6}.foot strong{color:#d7e5f2}a{color:#9bc9ff}.small{font-size:11px;color:#9eb1c6}
 @media(max-width:1120px){.layout{grid-template-columns:255px minmax(0,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.shell{padding:17px 12px 30px}.layout{display:block}.controls{position:static;margin-bottom:13px}.graphs{grid-template-columns:1fr 1fr;gap:8px}.intersection{padding:9px}.intersection header{align-items:start;flex-direction:column;gap:5px}.legend{font-size:10px}.legend strong{font-size:11px}.tally{font-size:11px}.tag{display:none}.metric{padding:13px}.metric-value{font-size:24px}}@media(max-width:520px){.graphs{grid-template-columns:1fr}.road{max-width:520px}.metrics{grid-template-columns:repeat(2,1fr)}.statusline{font-size:11px}}
+
+/* Language switch: designed to remain visible and legible on mobile. */
+.topline{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:7px}
+.topline .kicker{margin-bottom:0}
+.language-switch{display:inline-flex;gap:4px;padding:4px;background:#19283b;border:1px solid #49617e;border-radius:12px}
+.lang-btn{font:inherit;font-size:13px;font-weight:750;cursor:pointer;padding:8px 12px;color:#b4c8dd;border:0;background:transparent;border-radius:8px}
+.lang-btn[aria-pressed="true"]{background:#367fd2;color:#fff;box-shadow:0 1px 6px #0003}
+.lang-btn:focus-visible{outline:2px solid #81bbff;outline-offset:2px}
+@media(max-width:520px){.topline{align-items:stretch}.language-switch{width:max-content}}
+
+/* Executive reading experience — no changes to model or simulation logic */
+.shell{max-width:1450px;padding:24px 26px 56px}
+.hero-header{max-width:1080px;margin-bottom:14px}
+h1{font-size:clamp(29px,3.05vw,42px);line-height:1.16;margin-bottom:10px}
+.intro{font-size:15px;line-height:1.55;margin-bottom:18px;max-width:1060px}
+.insight{background:linear-gradient(115deg,#173452 0%,#172a3e 60%,#20273d 100%);border:1px solid #527492;border-radius:18px;padding:21px 24px 19px;margin:0 0 16px;box-shadow:0 12px 35px #050e1b2e}
+.insight-top{display:flex;gap:20px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.eyebrow{font-size:12px;letter-spacing:.1em;font-weight:850;text-transform:uppercase;color:#a9d5ff;margin:0 0 8px}
+.insight-main{font-size:clamp(19px,1.9vw,25px);font-weight:790;line-height:1.35;letter-spacing:-.025em;color:#fff;margin:0;max-width:900px}
+.insight-context{color:#c0d3e8;margin-top:9px;font-size:13px;max-width:1040px}
+.insight-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:17px}
+.insight-stat{background:#0b1729a9;padding:13px 15px;border:1px solid #425d7a;border-radius:11px;min-width:0}
+.insight-stat .stat-name{display:block;font-size:12px;font-weight:700;color:#c5d8ed}
+.insight-stat strong{display:block;font-size:clamp(19px,2.1vw,27px);color:#fff;font-variant-numeric:tabular-nums;margin:4px 0 0;white-space:normal;line-height:1.3}
+.insight-stat .stat-note{display:block;color:#9ebbd5;font-size:11px;line-height:1.4;margin-top:3px}
+.reading-guide{display:flex;align-items:stretch;gap:10px;margin-bottom:18px}
+.guide-title{flex:0 0 175px;padding:11px 6px 9px 0;align-self:center;font-size:14px;font-weight:800;line-height:1.25}
+.guide-step{flex:1;background:#17253a;border:1px solid #354c68;border-radius:12px;padding:12px 13px;min-width:0}
+.guide-step b{display:block;font-size:13px;color:#edf5ff;margin-bottom:4px}
+.guide-step p{font-size:12px;color:#bdd0e3;line-height:1.45}
+.guide-number{color:#8bbbf7;margin-right:5px;font-weight:900}
+.layout{grid-template-columns:286px minmax(0,1fr);gap:18px}
+.controls{position:sticky;top:12px;padding:19px}.controls h2{font-size:20px}
+.control{padding-top:16px}.control label{font-size:13px}.sub{font-size:12px;line-height:1.45;color:#b6c6d9}
+.note{font-size:11.5px;line-height:1.6;color:#a6bad1}
+.section-title{display:flex;align-items:baseline;gap:10px;justify-content:space-between;flex-wrap:wrap;margin:0 0 10px}
+.section-title h2{font-size:19px}.section-title p{font-size:12px;max-width:650px}
+.section-eyebrow{color:#84c2ff;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.statusline{margin:0 0 12px}.intersection h2{font-size:20px}
+.intersection-explain{font-size:12px;color:#b5cce0;line-height:1.45;margin:9px 0 3px;min-height:35px}
+.tally{color:#d3e2f1}.legend{font-size:12px}
+.metrics{margin-top:11px;gap:11px}
+.metric{padding:16px 15px 14px}
+.metric-label{font-size:13px;font-weight:730;color:#ebf5ff;min-height:42px;line-height:1.35}
+.metric-value{font-size:clamp(23px,2.1vw,30px);margin:7px 0}
+.metric-sub{font-size:12px;color:#bdd0e2}
+.metric .pair>span{font-size:12px;font-weight:750}
+.results-guide{font-size:12px;color:#b7cce2;margin:1px 0 11px;line-height:1.5}
+.chart{padding:21px 22px;margin-top:14px}.chart h2{font-size:19px}
+.foot{padding:16px 18px;border-left:3px solid #6b8aac;background:#152336;border-radius:6px 11px 11px 6px;font-size:12px;margin-top:17px;color:#c0d0e3;line-height:1.7}
+.foot strong{color:#f1f7ff}
+.clear-link{color:#acd8ff;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1120px){.layout{grid-template-columns:255px minmax(0,1fr)}.guide-title{flex-basis:130px}}
+@media(max-width:920px){.reading-guide{flex-wrap:wrap}.guide-title{flex:0 0 100%;padding:0}}
+@media(max-width:760px){.shell{padding:15px 12px 30px}.controls{position:static}.insight{padding:18px 16px}.insight-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.insight-stat{padding:11px 9px}.insight-stat .stat-name{font-size:11px}.insight-stat strong{font-size:20px}.reading-guide{gap:8px}.guide-step{flex:1 1 31%}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.intersection-explain{min-height:0}.section-title{display:block}.section-title p{margin-top:4px}}
+@media(max-width:520px){.insight-stats{grid-template-columns:1fr}.insight-stat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2px 8px;align-items:center}.insight-stat .stat-name{font-size:12px}.insight-stat strong{text-align:right;margin:0}.insight-stat .stat-note{grid-column:1/-1}.guide-step{flex:1 1 100%}.graphs{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{padding:12px 10px}.metric-label{font-size:12px;min-height:48px}.metric-value{font-size:22px}.metric-sub{font-size:11px}.statusline{gap:7px}}
+
 </style>
 </head>
 <body>
 <div class="shell">
-<div class="kicker">INTERACTIVE TRAFFIC ENGINEERING DEMO</div><h1>Opposing left turns: <span style="color:#88c2ff">ABD</span> vs <span style="color:#f49c8c">Türkiye-style</span></h1>
-<p class="intro">Identical cars and demand; different turning geometry and signal timing. In the <b style="color:#d8e6f6">ABD-style model</b>, opposing protected left turns share one green phase. In the <b style="color:#d8e6f6">outside-turn model</b> from your drawing, their crossing paths require separate protected phases. Adjust the inputs, play both intersections, and compare queues over 15 minutes.</p>
+<div class="hero-header"><div class="topline"><div class="kicker" data-i18n="kicker">INTERACTIVE TRAFFIC ENGINEERING DEMO</div><div class="language-switch" role="group" aria-label="Language / Dil"><button type="button" class="lang-btn" id="langEn" aria-pressed="true">English</button><button type="button" class="lang-btn" id="langTr" aria-pressed="false">Türkçe</button></div></div><h1><span data-i18n="titlePrefix">Opposing left turns:</span> <span style="color:#88c2ff">ABD</span> <span data-i18n="versus">vs</span> <span style="color:#f49c8c" data-i18n="turkiyeStyle">Türkiye-style</span></h1>
+<p class="intro" data-i18n-html="intro">Identical cars and demand; different turning geometry and signal timing. In the <b style="color:#d8e6f6">ABD-style model</b>, opposing protected left turns share one green phase. In the <b style="color:#d8e6f6">outside-turn model</b> from your drawing, their crossing paths require separate protected phases. Adjust the inputs, play both intersections, and compare queues over 15 minutes.</p></div>
+<section class="insight" aria-labelledby="insight-heading">
+ <div class="eyebrow" id="insight-heading" data-i18n="summaryHeading">The key takeaway</div>
+ <div class="insight-top"><p class="insight-main" id="summaryText" aria-live="polite"></p><a class="clear-link" href="#results" data-i18n="jumpResults">Explore results ↓</a></div>
+ <p class="insight-context" data-i18n="summaryContext">Same number of vehicles, same green time per direction. Only the modeled signal sequence changes.</p>
+ <div class="insight-stats" aria-label="Summary comparison" data-i18n-aria="summaryAria">
+  <div class="insight-stat"><span class="stat-name" data-i18n="statServed">More vehicles pass</span><strong id="topServed">—</strong><span class="stat-note" data-i18n="statServedNote">Difference over 15 minutes</span></div>
+  <div class="insight-stat"><span class="stat-name" data-i18n="statWaiting">Fewer vehicles still waiting</span><strong id="topWaiting">—</strong><span class="stat-note" data-i18n="statWaitingNote">At the 15-minute mark</span></div>
+  <div class="insight-stat"><span class="stat-name" data-i18n="statDelay">Less total waiting</span><strong id="topDelay">—</strong><span class="stat-note" data-i18n="statDelayNote">Compared with sequential green</span></div>
+ </div>
+</section>
+<div class="reading-guide" aria-label="How to use the simulator" data-i18n-aria="guideAria">
+  <div class="guide-title" data-i18n="guideTitle">Read this in 3 steps</div>
+  <div class="guide-step"><b><span class="guide-number">01</span> <span data-i18n="guideStep1">Change traffic demand</span></b><p data-i18n="guideDesc1">Use a preset or move the sliders.</p></div>
+  <div class="guide-step"><b><span class="guide-number">02</span> <span data-i18n="guideStep2">Watch the lights</span></b><p data-i18n="guideDesc2">Press Play or move the timeline.</p></div>
+  <div class="guide-step"><b><span class="guide-number">03</span> <span data-i18n="guideStep3">Compare results</span></b><p data-i18n="guideDesc3">See how many pass, wait, and queue.</p></div>
+</div>
 <div class="layout">
-<aside class="card controls"><h2>Simulation controls</h2><p class="small">Both intersections receive the same vehicle arrivals.</p>
-<div class="presets"><button class="btn mini" id="presetLow" type="button">Light</button><button class="btn mini" id="presetMid" type="button">Medium</button><button class="btn mini" id="presetHigh" type="button">Heavy</button></div>
-<div class="control"><label for="demand">Left-turn demand <output id="demandVal">400 vehicles/h</output></label><input id="demand" type="range" min="100" max="800" step="25" value="400"><div class="sub">For EACH of the two opposing approaches.</div></div>
-<div class="control"><label for="green">Green time per direction <output id="greenVal">20 s</output></label><input id="green" type="range" min="10" max="45" step="5" value="20"></div>
-<div class="control"><label for="other">Other traffic phases <output id="otherVal">50 s</output></label><input id="other" type="range" min="25" max="90" step="5" value="50"><div class="sub">Combined duration for other movements and return-to-start.</div></div>
-<div class="control"><label for="clearance">Interphase clearance <output id="clearanceVal">4 s</output></label><input id="clearance" type="range" min="2" max="6" step="1" value="4"><div class="sub">All-red / change interval after each left-turn phase.</div></div>
-<div class="control"><label for="speed">Playback speed <output id="speedVal">15×</output></label><input id="speed" type="range" min="1" max="60" step="1" value="15"></div>
-<div class="buttons"><button class="btn primary" id="play" type="button" style="flex:1">▶ Play</button><button class="btn" id="reset" type="button">↺ Reset</button><button class="btn" id="finish" type="button">End ↗</button></div>
-<p class="note">Assumptions: one dedicated left-turn lane per approach; maximum discharge rate 1,600 vehicles/hour while green; synthetic random arrivals (same seed for both cases); fixed phase times; 15-minute observation. This is a simplified demonstration, not a calibrated junction model.</p>
+<aside class="card controls" aria-label="Controls" data-i18n-aria="controlsAria"><h2 data-i18n="controlHeading">Simulation controls</h2><p class="small" data-i18n="equalArrivals">Both intersections receive the same vehicle arrivals.</p>
+<div class="presets"><button class="btn mini" id="presetLow" type="button" data-i18n="light">Light</button><button class="btn mini" id="presetMid" type="button" data-i18n="medium">Medium</button><button class="btn mini" id="presetHigh" type="button" data-i18n="heavy">Heavy</button></div>
+<div class="control"><label for="demand"><span data-i18n="demandLabel">Left-turn demand</span> <output id="demandVal">400 vehicles/h</output></label><input id="demand" type="range" min="100" max="800" step="25" value="400"><div class="sub" data-i18n="eachApproach">For EACH of the two opposing approaches.</div></div>
+<div class="control"><label for="green"><span data-i18n="greenLabel">Green time per direction</span> <output id="greenVal">20 s</output></label><input id="green" type="range" min="10" max="45" step="5" value="20"></div>
+<div class="control"><label for="other"><span data-i18n="otherLabel">Other traffic phases</span> <output id="otherVal">50 s</output></label><input id="other" type="range" min="25" max="90" step="5" value="50"><div class="sub" data-i18n="otherHelp">Combined duration for other movements and return-to-start.</div></div>
+<div class="control"><label for="clearance"><span data-i18n="clearanceLabel">Interphase clearance</span> <output id="clearanceVal">4 s</output></label><input id="clearance" type="range" min="2" max="6" step="1" value="4"><div class="sub" data-i18n="clearanceHelp">All-red / change interval after each left-turn phase.</div></div>
+<div class="control"><label for="speed"><span data-i18n="speedLabel">Playback speed</span> <output id="speedVal">15×</output></label><input id="speed" type="range" min="1" max="60" step="1" value="15"></div>
+<div class="buttons"><button class="btn primary" id="play" type="button" style="flex:1">▶ Play</button><button class="btn" id="reset" type="button" data-i18n="reset">↺ Reset</button><button class="btn" id="finish" type="button" data-i18n="finish">End ↗</button></div>
+<p class="note" data-i18n="assumptions">Assumptions: one dedicated left-turn lane per approach; maximum discharge rate 1,600 vehicles/hour while green; synthetic random arrivals (same seed for both cases); fixed phase times; 15-minute observation. This is a simplified demonstration, not a calibrated junction model.</p>
 </aside>
 <main class="column">
 <div class="statusline"><span class="badge"><i class="dot" id="statusDot"></i><span id="clock">Simulation clock · 00:00 / 15:00</span></span><span class="badge" id="cycles">Cycle lengths · ABD 74s · Türkiye 98s</span></div>
+<div class="section-title"><div><span class="section-eyebrow" data-i18n="stageTitle">01 · LIVE INTERSECTIONS</span><h2 data-i18n="stageHeading">What happens at the lights?</h2></div><p data-i18n="stageHelp">Watch both models at the same simulation time. Colored lamps indicate which driver has green.</p></div>
 <div class="graphs">
-<section class="card intersection"><header><h2 style="color:#9ccdff">ABD <span class="tag">Inside left turns</span></h2><div class="signal"><span id="usLampR" class="lamp"></span> Red <span id="usLampB" class="lamp"></span> Blue</div></header>
-<svg class="road" viewBox="0 0 400 400" aria-label="ABD left turns without conflicting paths" id="usRoad">
+<section class="card intersection"><header><h2 style="color:#9ccdff">ABD <span class="tag" data-i18n="insideTurns">Inside left turns</span></h2><div class="signal"><span id="usLampR" class="lamp"></span> <span data-i18n="red">Red</span> <span id="usLampB" class="lamp"></span> <span data-i18n="blue">Blue</span></div></header>
+<svg class="road" viewBox="0 0 400 400" aria-label="ABD left turns without conflicting paths" data-i18n-aria="usRoadAria" id="usRoad">
 <defs><pattern id="asphalt" width="25" height="25" patternUnits="userSpaceOnUse"><rect width="25" height="25" fill="#2c3946"/><circle cx="4" cy="4" r=".6" fill="#fff" opacity=".04"/></pattern></defs>
 <rect width="400" height="400" fill="#477462"/><path d="M128 0H272V400H128Z M0 128H400V272H0Z" fill="#2c3946"/>
 <g stroke="#c9d4d7" stroke-width="2"><path d="M128 0V128H0 M272 0V128H400 M0 272H128V400 M400 272H272V400" fill="none"/></g>
@@ -42,9 +117,9 @@ h1{font-size:clamp(28px,3vw,43px);letter-spacing:-.035em;line-height:1.06;margin
 <path id="usBluePath" d="M212 364 L212 252 C212 224 184 180 152 180 L26 180" fill="none" stroke="#399cff" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 8" opacity=".99"/>
 <g class="vehicles" id="usVehicles"></g>
 <g><rect x="178" y="36" width="19" height="34" rx="7" fill="#f75a69" stroke="#ffd0d0" stroke-width="1"/><rect x="181" y="41" width="13" height="8" rx="3" fill="#243448"/><rect x="203" y="330" width="19" height="34" rx="7" fill="#399cff" stroke="#c8e6ff" stroke-width="1"/><rect x="206" y="348" width="13" height="8" rx="3" fill="#243448"/></g>
-</svg><div class="legend"><span><b class="us" id="usPhase">Both directions: GREEN</b></span><span id="usCycleClock">0 / 74s</span></div><div class="tally"><span>Red queue: <strong id="usQR">0</strong></span><span>Blue queue: <strong id="usQB">0</strong></span></div></section>
-<section class="card intersection"><header><h2 style="color:#ffafa0">Türkiye <span class="tag">Outside left turns</span></h2><div class="signal"><span id="trLampR" class="lamp"></span> Red <span id="trLampB" class="lamp"></span> Blue</div></header>
-<svg class="road" viewBox="0 0 400 400" aria-label="Türkiye style left turns intersecting twice" id="trRoad">
+</svg><p class="intersection-explain" data-i18n="usExplain">Both protected left-turn directions can use the same green light.</p><div class="legend"><span><b class="us" id="usPhase">Both directions: GREEN</b></span><span id="usCycleClock">0 / 74s</span></div><div class="tally"><span><span data-i18n="redQueue">Red queue:</span> <strong id="usQR">0</strong></span><span><span data-i18n="blueQueue">Blue queue:</span> <strong id="usQB">0</strong></span></div></section>
+<section class="card intersection"><header><h2 style="color:#ffafa0">Türkiye <span class="tag" data-i18n="outsideTurns">Outside left turns</span></h2><div class="signal"><span id="trLampR" class="lamp"></span> <span data-i18n="red">Red</span> <span id="trLampB" class="lamp"></span> <span data-i18n="blue">Blue</span></div></header>
+<svg class="road" viewBox="0 0 400 400" aria-label="Türkiye style left turns intersecting twice" data-i18n-aria="trRoadAria" id="trRoad">
 <rect width="400" height="400" fill="#477462"/><path d="M128 0H272V400H128Z M0 128H400V272H0Z" fill="#2c3946"/>
 <g stroke="#c9d4d7" stroke-width="2"><path d="M128 0V128H0 M272 0V128H400 M0 272H128V400 M400 272H272V400" fill="none"/></g>
 <g stroke="#f3cb58" stroke-width="2.7"><path d="M198 0V128 M202 0V128 M198 272V400 M202 272V400 M0 198H128 M0 202H128 M272 198H400 M272 202H400"/></g>
@@ -54,49 +129,308 @@ h1{font-size:clamp(28px,3vw,43px);letter-spacing:-.035em;line-height:1.06;margin
 <path id="trBluePath" d="M212 364 L212 174 Q212 158 196 158 L26 158" fill="none" stroke="#399cff" stroke-width="7" stroke-linecap="round" stroke-dasharray="13 8"/>
 <g class="vehicles" id="trVehicles"></g>
 <g><rect x="178" y="36" width="19" height="34" rx="7" fill="#f75a69" stroke="#ffd0d0" stroke-width="1"/><rect x="203" y="330" width="19" height="34" rx="7" fill="#399cff" stroke="#c8e6ff" stroke-width="1"/></g>
-</svg><div class="legend"><span><b class="b" id="trPhase">Red: GREEN · Blue waits</b></span><span id="trCycleClock">0 / 98s</span></div><div class="tally"><span>Red queue: <strong id="trQR">0</strong></span><span>Blue queue: <strong id="trQB">0</strong></span></div></section>
+</svg><p class="intersection-explain" data-i18n="trExplain">To prevent crossing paths, one side goes first; the other waits.</p><div class="legend"><span><b class="b" id="trPhase">Red: GREEN · Blue waits</b></span><span id="trCycleClock">0 / 98s</span></div><div class="tally"><span><span data-i18n="redQueue">Red queue:</span> <strong id="trQR">0</strong></span><span><span data-i18n="blueQueue">Blue queue:</span> <strong id="trQB">0</strong></span></div></section>
 </div>
-<div class="card mid-card"><div class="row" style="justify-content:space-between"><strong>Playhead</strong><span class="small">Drag to inspect any moment · Results below cover the full 15 minutes</span></div><input id="scrub" class="playhead" type="range" min="0" max="900" value="0" step="1" aria-label="Simulation time"><div class="timeline"><span>0:00</span><span>5:00</span><span>10:00</span><span>15:00</span></div></div>
+<div class="section-title" style="margin-top:20px"><div><span class="section-eyebrow" data-i18n="stageTwoTitle">02 · NAVIGATE THE SIMULATION</span><h2 data-i18n="stageTwoHeading">Pause or jump to any moment</h2></div></div>
+<div class="card mid-card"><div class="row" style="justify-content:space-between"><strong data-i18n="playhead">Playhead</strong><span class="small" data-i18n="scrubHelp">Drag to inspect any moment · Results below cover the full 15 minutes</span></div><input id="scrub" class="playhead" type="range" min="0" max="900" value="0" step="1" aria-label="Simulation time" data-i18n-aria="scrubAria"><div class="timeline"><span>0:00</span><span>5:00</span><span>10:00</span><span>15:00</span></div></div>
+<div class="section-title" id="results" style="margin-top:22px"><div><span class="section-eyebrow" data-i18n="resultsTitle">03 · RESULTS</span><h2 data-i18n="resultsHeading">What changed after 15 minutes?</h2></div><p data-i18n="resultsHelp">These totals are for the full run, even when the animation is paused.</p></div>
+<p class="results-guide" data-i18n="metricsReading">Blue values = ABD-style model. Orange values = Türkiye-style model. Both use exactly the same vehicle arrivals.</p>
 <div class="metrics">
-<div class="card metric"><div class="metric-label">Theoretical left-turn capacity <br>per approach</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usCap">—</div><div class="metric-value tr" id="trCap">—</div></div><div class="metric-sub">vehicles / hour / approach</div></div>
-<div class="card metric"><div class="metric-label">Vehicles served <br>both directions combined</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usServed">—</div><div class="metric-value tr" id="trServed">—</div></div><div class="metric-sub">within the 15-minute simulation</div></div>
-<div class="card metric"><div class="metric-label">Vehicles still waiting <br>at 15 minutes</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usRem">—</div><div class="metric-value tr" id="trRem">—</div></div><div class="metric-sub">both queues at the endpoint</div></div>
-<div class="card metric"><div class="metric-label">Total queue delay <br>accumulated in 15 minutes</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usDelay">—</div><div class="metric-value tr" id="trDelay">—</div></div><div class="metric-sub">vehicle-minutes (unfinished waits counted only through minute 15)</div></div>
+<div class="card metric"><div class="metric-label" data-i18n-html="capLabel">Theoretical left-turn capacity <br>per approach</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usCap">—</div><div class="metric-value tr" id="trCap">—</div></div><div class="metric-sub" data-i18n="capHelp">vehicles / hour / approach</div></div>
+<div class="card metric"><div class="metric-label" data-i18n-html="servedLabel">Vehicles served <br>both directions combined</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usServed">—</div><div class="metric-value tr" id="trServed">—</div></div><div class="metric-sub" data-i18n="servedHelp">within the 15-minute simulation</div></div>
+<div class="card metric"><div class="metric-label" data-i18n-html="waitingLabel">Vehicles still waiting <br>at 15 minutes</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usRem">—</div><div class="metric-value tr" id="trRem">—</div></div><div class="metric-sub" data-i18n="waitingHelp">both queues at the endpoint</div></div>
+<div class="card metric"><div class="metric-label" data-i18n-html="delayLabel">Total queue delay <br>accumulated in 15 minutes</div><div class="pair"><span class="us">ABD</span><span class="tr">Türkiye</span></div><div class="pair"><div class="metric-value us" id="usDelay">—</div><div class="metric-value tr" id="trDelay">—</div></div><div class="metric-sub" data-i18n="delayHelp">vehicle-minutes (unfinished waits counted only through minute 15)</div></div>
 </div>
-<section class="card chart"><div class="charthead"><div><h2>Queue build-up over time</h2><p class="small">Combined red + blue queues. Higher line = more vehicles waiting.</p></div><div class="line-legend"><span><i style="background:#54a8ff"></i>ABD</span><span><i style="background:#f08c79"></i>Türkiye-style</span></div></div><svg id="qChart" viewBox="0 0 800 255" role="img" aria-label="Queue length comparison line chart"></svg></section>
-<p class="foot"><strong>What this sim isolates:</strong> signal timing required by the two specific paths in your diagrams. Both green in the ABD-style case; sequential green in the two-crossing Türkiye-style case. It does <em>not</em> claim every intersection in either country uses these phases. Other movements are represented by a fixed-duration phase, and only left-turn queues are simulated. Arrival events are identical in both scenarios, so differences arise from phase geometry and scheduling.</p>
+<section class="card chart"><div class="charthead"><div><h2 data-i18n="chartTitle">Queue build-up over time</h2><p class="small" data-i18n="chartSub">Combined red + blue queues. Higher line = more vehicles waiting.</p></div><div class="line-legend"><span><i style="background:#54a8ff"></i>ABD</span><span><i style="background:#f08c79"></i><span data-i18n="turkiyeStyle">Türkiye-style</span></span></div></div><svg id="qChart" viewBox="0 0 800 255" role="img" aria-label="Queue length comparison line chart" data-i18n-aria="chartAria"></svg></section>
+<p class="foot" data-i18n-html="foot"><strong>What this sim isolates:</strong> signal timing required by the two specific paths in your diagrams. Both green in the ABD-style case; sequential green in the two-crossing Türkiye-style case. It does <em>not</em> claim every intersection in either country uses these phases. Other movements are represented by a fixed-duration phase, and only left-turn queues are simulated. Arrival events are identical in both scenarios, so differences arise from phase geometry and scheduling.</p>
 </main></div></div>
 <script>
 (()=>{
 const $=id=>document.getElementById(id);const S={demand:400,green:20,other:50,clearance:4,speed:15,duration:900};let data,now=0,playing=false,lastFrame=0,clockAccel=0;
+const I18N = {
+  "en": {
+    "pageTitle": "Left-turn traffic simulator | ABD vs Türkiye-style",
+    "kicker": "INTERACTIVE TRAFFIC COMPARISON",
+    "titlePrefix": "Left-turn signals:",
+    "versus": "vs",
+    "turkiyeStyle": "Türkiye-style",
+    "intro": "Why do some left-turn signals let both opposing directions move together while others take turns? Compare two example layouts using the same vehicles. Change the settings, watch the signals, and see how traffic builds up over 15 minutes.",
+    "controlHeading": "Try different traffic conditions",
+    "equalArrivals": "Both intersections receive exactly the same vehicles.",
+    "light": "Light",
+    "medium": "Normal",
+    "heavy": "Heavy",
+    "demandLabel": "Vehicles arriving to turn left",
+    "eachApproach": "Average arrivals per hour, in each of the two directions.",
+    "greenLabel": "Green-light time per direction",
+    "otherLabel": "Time for other traffic",
+    "otherHelp": "Seconds reserved for traffic that is not turning left.",
+    "clearanceLabel": "Safety interval between phases",
+    "clearanceHelp": "Seconds when both left-turn signals are red, between green phases.",
+    "speedLabel": "Animation speed",
+    "play": "▶ Play",
+    "pause": "⏸ Pause",
+    "replay": "▶ Play again",
+    "reset": "↺ Reset",
+    "finish": "See end ↗",
+    "assumptions": "Model assumptions: one left-turn lane in each direction; at most 1,600 vehicles/hour can clear each lane while green; the same randomly generated arrivals in both scenarios; fixed signal timing; 15 minutes total. Simplified educational model, not a prediction for a particular intersection.",
+    "clock": "Simulated time",
+    "cycles": "Full signal cycles",
+    "insideTurns": "Inside turn",
+    "outsideTurns": "Outside turn",
+    "red": "Red car",
+    "blue": "Blue car",
+    "redQueue": "Red cars waiting:",
+    "blueQueue": "Blue cars waiting:",
+    "bothGreen": "Both directions have green",
+    "clearancePhase": "Both left-turn lights are red",
+    "otherMovements": "Other traffic has its turn",
+    "redGreen": "Red car: GREEN · Blue waits",
+    "blueGreen": "Blue car: GREEN · Red waits",
+    "playhead": "Simulation timeline",
+    "scrubHelp": "Drag to check any moment. The results below cover all 15 minutes.",
+    "scrubAria": "Choose a moment in the simulation",
+    "capLabel": "Hourly turning capacity <br>per direction",
+    "servedLabel": "Vehicles that completed <br>their turns",
+    "waitingLabel": "Vehicles still in line <br>after 15 minutes",
+    "delayLabel": "Total time spent <br>waiting in line",
+    "capHelp": "Maximum possible vehicles/hour, per left-turn lane",
+    "servedHelp": "Combined total for both directions over 15 minutes",
+    "waitingHelp": "Both directions combined at minute 15",
+    "delayHelp": "Vehicle-minutes: one car waiting 5 minutes = 5 vehicle-minutes",
+    "chartTitle": "How the queues change over time",
+    "chartSub": "Both directions combined for each intersection. Higher line means more vehicles waiting.",
+    "chartAria": "Line chart comparing queued vehicles over 15 minutes",
+    "usRoadAria": "ABD-style: two simultaneous protected left-turns",
+    "trRoadAria": "Türkiye-style: conflicting turn paths require separate protected greens",
+    "foot": "<strong>How to interpret this model:</strong> It compares the two specific turn paths illustrated above, not all intersections in either country. The ABD-style layout allows both left turns during one protected green phase. The drawn Türkiye-style paths cross, so this example uses separate protected greens. Only left-turn queues are modeled; other traffic uses a fixed amount of the cycle. Both scenarios share identical vehicle arrivals. Results show the effect of these particular phase plans, not a verified national difference.",
+    "vehiclesUnit": " vehicles/h",
+    "secondsUnit": " s",
+    "chartMinuteUnit": "min",
+    "summaryHeading": "BOTTOM LINE · 15-MINUTE SCENARIO",
+    "summaryContext": "Same arrivals and green duration per direction. The key difference is whether both directions can receive green simultaneously.",
+    "summaryAria": "Summary of simulated results",
+    "jumpResults": "See detailed results ↓",
+    "statServed": "Additional turns completed (ABD)",
+    "statServedReverse": "Extra turns completed (Türkiye-style)",
+    "statWaitingReverse": "More cars left in line (ABD)",
+    "statDelayReverse": "Increase in combined queue delay (ABD)",
+    "statServedNote": "Difference versus separate greens",
+    "statWaiting": "Fewer cars left in line (ABD)",
+    "statWaitingNote": "After 15 simulated minutes",
+    "statDelay": "Reduction in combined queue delay",
+    "statDelayNote": "Compared with the Türkiye-style scenario",
+    "summaryMore": "In this example, simultaneous protected greens let {served} more vehicles turn in 15 minutes and leave {waiting} fewer waiting than sequential greens.",
+    "summarySame": "With these settings, both layouts serve the same number of vehicles in 15 minutes; signal timing still differs.",
+    "summaryOther": "With these settings, separate greens serve {served} more vehicles. Review the queue chart and signal times for this scenario.",
+    "sumNum": "{n} vehicles",
+    "sumPct": "{n}%",
+    "guideAria": "Three steps to use the simulator",
+    "guideTitle": "How to use this page",
+    "guideStep1": "Adjust the traffic",
+    "guideDesc1": "Choose Light, Normal, or Heavy—or move a slider.",
+    "guideStep2": "Watch the lights",
+    "guideDesc2": "Press Play or drag the timeline to inspect a moment.",
+    "guideStep3": "Read the results",
+    "guideDesc3": "Compare completed turns, queues, and waiting time.",
+    "stageTitle": "01 · SEE IT HAPPEN",
+    "stageHeading": "How do the signals differ?",
+    "stageHelp": "The two views run on the same clock. Green indicators show who can turn.",
+    "usExplain": "Opposing left turns move together during one protected green phase.",
+    "trExplain": "Because these paths cross, one direction gets green while the other waits.",
+    "stageTwoTitle": "02 · EXPLORE TIME",
+    "stageTwoHeading": "Jump to any moment",
+    "resultsTitle": "03 · COMPARE THE OUTCOMES",
+    "resultsHeading": "Results after 15 minutes",
+    "resultsHelp": "These numbers cover the full scenario, even when playback is paused.",
+    "metricsReading": "Blue numbers represent the ABD-style model; orange numbers represent the Türkiye-style model. Both receive the same vehicles.",
+    "controlsAria": "Traffic simulation settings"
+  },
+  "tr": {
+    "pageTitle": "Sola Dönüş Simülasyonu | ABD ve Türkiye Örnekleri",
+    "kicker": "ETKİLEŞİMLİ TRAFİK KARŞILAŞTIRMASI",
+    "titlePrefix": "Sola dönüşte trafik ışıkları:",
+    "versus": "ve",
+    "turkiyeStyle": "Türkiye örneği",
+    "intro": "Karşı yönden gelen iki araç sola dönecekse trafik ışıkları nasıl çalışmalı? Aynı sayıda aracın geldiği iki farklı kavşak düzenini karşılaştırın. Ayarları değiştirin, ışıkları izleyin ve 15 dakika sonunda ne kadar araç biriktiğini görün.",
+    "controlHeading": "Trafiği siz ayarlayın",
+    "equalArrivals": "Her iki kavşağa da aynı araçlar geliyor.",
+    "light": "Az trafik",
+    "medium": "Normal",
+    "heavy": "Yoğun",
+    "demandLabel": "Saatte sola dönmek isteyen araç sayısı",
+    "eachApproach": "Her yönden saatte ortalama kaç araç geliyor?",
+    "greenLabel": "Bir yöndeki yeşil ışık süresi",
+    "otherLabel": "Diğer araçlara ayrılan süre",
+    "otherHelp": "Sola dönmeyen araçların geçmesi için ayrılan süre.",
+    "clearanceLabel": "Işıklar arasındaki güvenlik süresi",
+    "clearanceHelp": "Bir yeşil ışık bitip diğeri yanmadan önce iki yöne de kırmızı yanıyor.",
+    "speedLabel": "Canlandırma hızı",
+    "play": "▶ Başlat",
+    "pause": "⏸ Duraklat",
+    "replay": "▶ Yeniden başlat",
+    "reset": "↺ Başa dön",
+    "finish": "Sona git ↗",
+    "assumptions": "Bu örnekte her yönde sola dönüş için bir şerit var. Yeşil ışıkta bir şeritten saatte en fazla 1.600 araç geçebileceği varsayılıyor. İki kavşağa da aynı sırayla araç geliyor. Işık süreleri sabit; simülasyon 15 dakika sürüyor. Bu, gerçek bir kavşağın trafik tahmini değil, basitleştirilmiş bir karşılaştırmadır.",
+    "clock": "Geçen süre",
+    "cycles": "Işık döngüsünün süresi",
+    "insideTurns": "İçten dönüş",
+    "outsideTurns": "Dıştan dönüş",
+    "red": "Kırmızı araç",
+    "blue": "Mavi araç",
+    "redQueue": "Kırmızı yönde bekleyen:",
+    "blueQueue": "Mavi yönde bekleyen:",
+    "bothGreen": "İki yöne de yeşil yanıyor",
+    "clearancePhase": "İki sola dönüş ışığı da kırmızı",
+    "otherMovements": "Diğer araçlar geçiyor",
+    "redGreen": "Kırmızı araca yeşil · Mavi bekliyor",
+    "blueGreen": "Mavi araca yeşil · Kırmızı bekliyor",
+    "playhead": "Zaman çizelgesi",
+    "scrubHelp": "İstediğiniz anı görmek için kaydırın. Aşağıdaki sonuçlar 15 dakikanın tamamını gösterir.",
+    "scrubAria": "Simülasyonda görmek istediğiniz zamanı seçin",
+    "capLabel": "Bir yönde saatte <br>geçebilecek en fazla araç",
+    "servedLabel": "15 dakikada sola <br>dönen araç sayısı",
+    "waitingLabel": "15 dakika sonunda <br>bekleyen araç sayısı",
+    "delayLabel": "Araçların kuyrukta <br>geçirdiği toplam süre",
+    "capHelp": "Tek bir sola dönüş şeridi için saatlik üst sınır",
+    "servedHelp": "İki yöndeki araçların toplamı",
+    "waitingHelp": "İki yönde hâlâ sırada olanlar",
+    "delayHelp": "Araç-dakika cinsinden. Örneğin, bir aracın 5 dakika beklemesi = 5 araç-dakika.",
+    "chartTitle": "Bekleyen araç sayısı nasıl değişiyor?",
+    "chartSub": "Her kavşaktaki iki yönün toplamı. Çizgi yükselirse kuyruk uzuyor.",
+    "chartAria": "15 dakika boyunca bekleyen araç sayısını karşılaştıran çizgi grafik",
+    "usRoadAria": "ABD örneği: Karşılıklı araçlar aynı yeşil ışıkta sola dönüyor",
+    "trRoadAria": "Türkiye örneği: Dönüş yolları kesiştiğinden yeşil ışıklar sırayla yanıyor",
+    "foot": "<strong>Bu karşılaştırma nasıl okunmalı?</strong> Sonuçlar yalnızca resimdeki iki kavşak örneğine aittir; tüm ABD veya Türkiye kavşakları için geçerli değildir. Solda iki yön aynı anda yeşil ışık alıyor. Sağda ise çizilen dönüş yolları kesiştiğinden yönler sırayla yeşil alıyor. Simülasyon yalnızca sola dönüş yapan araçları hesaplıyor; diğer trafik hareketleri için sabit süre ayırıyor. İki kavşağa da aynı araçlar geldiği için karşılaştırma, kullanılan ışık düzeninin etkisini gösteriyor.",
+    "vehiclesUnit": " araç/sa",
+    "secondsUnit": " sn",
+    "chartMinuteUnit": "dk",
+    "summaryHeading": "ÖZET · 15 DAKİKALIK KARŞILAŞTIRMA",
+    "summaryContext": "İki kavşağa da aynı araçlar geliyor. Her yönün yeşil ışık süresi aynı. Fark, karşılıklı yönlerin aynı anda mı yoksa sırayla mı yeşil aldığı.",
+    "summaryAria": "Simülasyon sonuçlarının özeti",
+    "jumpResults": "Sonuçlara git ↓",
+    "statServed": "ABD örneğinde fazladan geçen araç",
+    "statServedReverse": "Türkiye örneğinde fazladan geçen araç",
+    "statWaitingReverse": "ABD örneğinde daha fazla bekleyen araç",
+    "statDelayReverse": "ABD örneğinde toplam bekleme artışı",
+    "statServedNote": "Sırayla yeşil yanan kavşağa göre",
+    "statWaiting": "ABD örneğinde kuyrukta daha az araç",
+    "statWaitingNote": "15 dakika sonunda",
+    "statDelay": "Toplam bekleme süresindeki azalma",
+    "statDelayNote": "Türkiye örneğine göre",
+    "summaryMore": "Bu örnekte iki yön birlikte yeşil aldığı için 15 dakikada {served} araç daha fazla sola dönüyor. Kuyrukta da {waiting} araç daha az kalıyor.",
+    "summarySame": "Bu ayarlarda 15 dakikada iki kavşaktan da aynı sayıda araç geçiyor. Ancak ışıkların çalışma şekli farklı.",
+    "summaryOther": "Bu ayarlarda sırayla yanan ışıklarla {served} araç daha fazla geçiyor. Nedenini görmek için kuyruk grafiğine ve ışık sürelerine bakın.",
+    "sumNum": "{n} araç",
+    "sumPct": "%{n}",
+    "guideAria": "Simülatörü kullanmanın üç adımı",
+    "guideTitle": "Nasıl kullanılır?",
+    "guideStep1": "Trafik yoğunluğunu seçin",
+    "guideDesc1": "Az trafik, Normal veya Yoğun seçin. İsterseniz ayarları değiştirin.",
+    "guideStep2": "Işıkları izleyin",
+    "guideDesc2": "Başlat’a basın ya da zaman çubuğunu kaydırın.",
+    "guideStep3": "Sonuçları karşılaştırın",
+    "guideDesc3": "Kaç araç geçti, kaçı bekliyor, ne kadar zaman kaybedildi?",
+    "stageTitle": "01 · KAVŞAKLARI İZLEYİN",
+    "stageHeading": "Işıklar nasıl çalışıyor?",
+    "stageHelp": "İki kavşakta da zaman aynı ilerler. Yeşil göstergeler, hangi aracın dönebileceğini gösterir.",
+    "usExplain": "Karşılıklı gelen araçlar aynı yeşil ışıkta sola dönebilir.",
+    "trExplain": "Bu çizimde dönüş yolları kesiştiği için yönler sırayla yeşil ışık alır.",
+    "stageTwoTitle": "02 · ZAMANI DEĞİŞTİRİN",
+    "stageTwoHeading": "İstediğiniz ana gidin",
+    "resultsTitle": "03 · SONUÇLARI KARŞILAŞTIRIN",
+    "resultsHeading": "15 dakika sonra ne oluyor?",
+    "resultsHelp": "Simülasyon dursa bile buradaki sayılar 15 dakikanın tamamını gösterir.",
+    "metricsReading": "Mavi sayılar ABD örneğini, turuncu sayılar Türkiye örneğini gösterir. İki kavşağa da aynı araçlar geliyor.",
+    "controlsAria": "Trafik simülasyonu ayarları"
+  }
+};
+let lang='en';
+try {const saved=localStorage.getItem('leftTurnSimulatorLanguage');if(saved==='tr'||saved==='en')lang=saved;}catch(_ignored){}
+const tt = key => I18N[lang][key] ?? I18N.en[key] ?? key;
+function applyLanguage(){
+ document.documentElement.lang=lang;
+ document.title=tt('pageTitle');
+ document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=tt(el.dataset.i18n);});
+ document.querySelectorAll('[data-i18n-html]').forEach(el=>{el.innerHTML=tt(el.dataset.i18nHtml);});
+ document.querySelectorAll('[data-i18n-aria]').forEach(el=>{el.setAttribute('aria-label',tt(el.dataset.i18nAria));});
+ $('langEn').setAttribute('aria-pressed',String(lang==='en'));
+ $('langTr').setAttribute('aria-pressed',String(lang==='tr'));
+}
+function updateReadouts(){
+ for(const k of ['demand','green','other','clearance','speed']){
+   put(k+'Val',S[k]+(k==='demand'?tt('vehiclesUnit'):k==='speed'?'×':tt('secondsUnit')));
+ }
+}
+function updateMetrics(){
+ if(!data)return;
+ const locale=lang==='tr'?'tr-TR':'en-US';
+ for(const key of ['us','tr']){
+   const x=data[key];
+   put(key+'Cap',x.cap.toLocaleString(locale));
+   put(key+'Served',x.servedN.toLocaleString(locale));
+   put(key+'Rem',x.remaining.toLocaleString(locale));
+   put(key+'Delay',x.delayMin.toLocaleString(locale,{minimumFractionDigits:1,maximumFractionDigits:1}));
+ }
+}
+function interpolate(template,values){return template.replace(/\{(\w+)\}/g,(_,key)=>String(values[key] ?? ''));}
+function updateSummary(){
+ if(!data)return;
+ const format = n => n.toLocaleString(lang==='tr'?'tr-TR':'en-US');
+ const served = data.us.servedN-data.tr.servedN;
+ const remaining = data.tr.remaining-data.us.remaining;
+ const reduction = data.tr.delayMin>0 ? Math.round((data.tr.delayMin-data.us.delayMin)/data.tr.delayMin*100) : 0;
+ const explanation = served>0 ? 'summaryMore' : served===0 ? 'summarySame' : 'summaryOther';
+ put('summaryText',interpolate(tt(explanation),{served:format(Math.abs(served)),waiting:format(Math.max(0,remaining))}));
+ document.querySelectorAll('.insight-stat .stat-name')[0].textContent=tt(served>=0?'statServed':'statServedReverse');
+ document.querySelectorAll('.insight-stat .stat-name')[1].textContent=tt(remaining>=0?'statWaiting':'statWaitingReverse');
+ document.querySelectorAll('.insight-stat .stat-name')[2].textContent=tt(reduction>=0?'statDelay':'statDelayReverse');
+ put('topServed',interpolate(tt('sumNum'),{n:format(Math.abs(served))}));
+ put('topWaiting',interpolate(tt('sumNum'),{n:format(Math.abs(remaining))}));
+ put('topDelay',interpolate(tt('sumPct'),{n:format(Math.abs(reduction))}));
+}
+function playCaption(){return tt(now>=S.duration?'replay':playing?'pause':'play');}
+function updateLiveLabels(){
+ put('play',playCaption());
+ put('cycles',`${tt('cycles')} · ABD ${data.us.cycle}${tt('secondsUnit')} · Türkiye ${data.tr.cycle}${tt('secondsUnit')}`);
+}
+function setLanguage(next){
+ if(next!=='en'&&next!=='tr')return;
+ lang=next;
+ try{localStorage.setItem('leftTurnSimulatorLanguage',lang)}catch(_ignored){}
+ applyLanguage();updateReadouts();
+ if(data){updateLiveLabels();updateMetrics();updateSummary();drawChart();render();}
+}
+
 const clamp=(n,lo,hi)=>Math.max(lo,Math.min(hi,n));
 function prng(seed){let state=seed>>>0;return ()=>{state=(Math.imul(1664525,state)+1013904223)>>>0;return state/4294967296;}}
 function arrivals(rate,seed){const rand=prng(seed),a=[];let tm=0;while(true){tm+=-Math.log(Math.max(.0000001,1-rand()))*3600/rate;if(tm>=S.duration)break;a.push(tm)}return a}
-function phase(mode,t){const g=S.green,c=S.clearance,o=S.other,cycle=mode==='us'?g+c+o:2*g+2*c+o,r=((t%cycle)+cycle)%cycle; if(mode==='us')return {red:r<g,blue:r<g,r,cycle,label:r<g?'Both directions: GREEN':r<g+c?'All-red clearance':'Other traffic movements'};return {red:r<g,blue:r>=g+c&&r<g+c+g,r,cycle,label:r<g?'Red: GREEN · Blue waits':r<g+c?'All-red clearance':r<g+c+g?'Blue: GREEN · Red waits':r<2*g+2*c?'All-red clearance':'Other traffic movements'} }
+function phase(mode,t){const g=S.green,c=S.clearance,o=S.other,cycle=mode==='us'?g+c+o:2*g+2*c+o,r=((t%cycle)+cycle)%cycle; if(mode==='us')return {red:r<g,blue:r<g,r,cycle,label:r<g?tt('bothGreen'):r<g+c?tt('clearancePhase'):tt('otherMovements')};return {red:r<g,blue:r>=g+c&&r<g+c+g,r,cycle,label:r<g?tt('redGreen'):r<g+c?tt('clearancePhase'):r<g+c+g?tt('blueGreen'):r<2*g+2*c?tt('clearancePhase'):tt('otherMovements')} }
 function sim(mode,arr){let q=[[],[]],nextArrival=[0,0],credit=[0,0],arrN=0,departN=0,delaySec=0;const served=[[],[]],snap=[{q:[0,0],served:0,arrivals:0,delaySec:0}];for(let sec=0;sec<S.duration;sec++){
  for(let d=0;d<2;d++){while(nextArrival[d]<arr[d].length&&arr[d][nextArrival[d]]<sec+1){q[d].push(arr[d][nextArrival[d]++]);arrN++}}
  const p=phase(mode,sec);for(let d=0;d<2;d++){let green=d===0?p.red:p.blue;if(green){credit[d]+=1600/3600; if(credit[d]>=1&&q[d].length){let count=Math.floor(credit[d]);while(count-- >0&&q[d].length){let entry=q[d].shift();const dt=sec+.9;served[d].push(dt);departN++;} credit[d]%=1}else if(q[d].length===0){credit[d]=0}}else credit[d]=0}
  delaySec+=q[0].length+q[1].length;snap.push({q:[q[0].length,q[1].length],served:departN,arrivals:arrN,delaySec})}
 return {snap,served,servedN:departN,remaining:q[0].length+q[1].length,arrivalsN:arrN,delayMin:delaySec/60,cycle:phase(mode,0).cycle,cap:Math.round(1600*S.green/phase(mode,0).cycle)} }
 function put(id,v){$(id).textContent=v};function fmt(s){return `${Math.floor(s/60).toString().padStart(2,'0')}:${Math.floor(s%60).toString().padStart(2,'0')}`}
-function recalc(){let arr=[arrivals(S.demand,2083401),arrivals(S.demand,734003)]; data={us:sim('us',arr),tr:sim('tr',arr)};now=0;playing=false;put('play','▶ Play');$('statusDot').style.background='#8baac7';put('cycles',`Cycle lengths · ABD ${data.us.cycle}s · Türkiye ${data.tr.cycle}s`);
-for(let key of ['us','tr']){const x=data[key];put(key+'Cap',x.cap.toLocaleString('en-US'));put(key+'Served',x.servedN);put(key+'Rem',x.remaining);put(key+'Delay',x.delayMin.toFixed(1));}drawChart();render()}
-function render(){let t=clamp(now,0,S.duration),timeSec=Math.floor(t);put('clock',`Simulation clock · ${fmt(t)} / 15:00`);$('scrub').value=Math.floor(t);for(const k of ['us','tr']){const p=phase(k,t),snap=data[k].snap[Math.floor(t)];put(k+'Phase',p.label);put(k+'CycleClock',`${Math.floor(p.r)} / ${p.cycle}s`);put(k+'QR',snap.q[0]);put(k+'QB',snap.q[1]);$(k+'LampR').className='lamp'+(p.red?' green':'');$(k+'LampB').className='lamp'+(p.blue?' green':'');drawVehicles(k,t)}drawIndicator(t)}
+function recalc(){let arr=[arrivals(S.demand,2083401),arrivals(S.demand,734003)]; data={us:sim('us',arr),tr:sim('tr',arr)};now=0;playing=false;$('statusDot').style.background='#8baac7';updateLiveLabels();
+updateMetrics();updateSummary();drawChart();render()}
+function render(){let t=clamp(now,0,S.duration),timeSec=Math.floor(t);put('clock',`${tt('clock')} · ${fmt(t)} / 15:00`);$('scrub').value=Math.floor(t);for(const k of ['us','tr']){const p=phase(k,t),snap=data[k].snap[Math.floor(t)];put(k+'Phase',p.label);put(k+'CycleClock',`${Math.floor(p.r)} / ${p.cycle}${tt('secondsUnit')}`);put(k+'QR',snap.q[0]);put(k+'QB',snap.q[1]);$(k+'LampR').className='lamp'+(p.red?' green':'');$(k+'LampB').className='lamp'+(p.blue?' green':'');drawVehicles(k,t)}drawIndicator(t)}
 function drawVehicles(k,t){const group=$(k+'Vehicles');const model=data[k],svg=$(k+'Road'),ns='http://www.w3.org/2000/svg';group.replaceChildren();for(let d=0;d<2;d++){const ev=model.served[d],path=$(k+(d?'Blue':'Red')+'Path'),length=path.getTotalLength();let idx=ev.length-1;while(idx>=0 && ev[idx]>t)idx--;for(let j=idx;j>=Math.max(0,idx-4);j--){let elapsed=t-ev[j];if(elapsed<0||elapsed>8)continue;let frac=elapsed/8,at=length*frac;let pt=path.getPointAtLength(at),m=path.getPointAtLength(Math.min(length,at+2));const rotation=Math.atan2(m.y-pt.y,m.x-pt.x)*180/Math.PI+90;
 const marker=document.createElementNS(ns,'g');marker.setAttribute('transform',`translate(${pt.x.toFixed(1)} ${pt.y.toFixed(1)}) rotate(${rotation.toFixed(1)})`);const body=document.createElementNS(ns,'rect');Object.entries({x:-5.5,y:-10,width:11,height:20,rx:4,fill:d?'#4daaff':'#ff6876',stroke:'#e8f7ff','stroke-width':1.3}).forEach(([a,v])=>body.setAttribute(a,v));marker.appendChild(body);group.appendChild(marker)}}}
 function drawChart(){let maxQ=1;for(let t=0;t<=S.duration;t++){maxQ=Math.max(maxQ, data.us.snap[t].q[0]+data.us.snap[t].q[1],data.tr.snap[t].q[0]+data.tr.snap[t].q[1])}maxQ=Math.max(5,Math.ceil(maxQ/5)*5);const w=800,h=255,x0=45,x1=783,y0=12,y1=222,ns='http://www.w3.org/2000/svg',chart=$('qChart');chart.replaceChildren();const element=(name,attrs,txt)=>{let e=document.createElementNS(ns,name);for(const [k,v]of Object.entries(attrs))e.setAttribute(k,v);if(txt!==undefined)e.textContent=txt;chart.appendChild(e);return e};
 for(let i=0;i<=4;i++){let y=y1-(y1-y0)*i/4;element('line',{x1:x0,y1:y,x2:x1,y2:y,stroke:'#43556a','stroke-width':1,opacity:.7});element('text',{x:x0-12,y:y+4,fill:'#a4bcd2','font-size':12,'text-anchor':'end'},Math.round(maxQ*i/4))}
-for(let i=0;i<=3;i++){let x=x0+(x1-x0)*i/3; element('text',{x,y:y1+22,fill:'#a4bcd2','font-size':12,'text-anchor':'middle'},i*5+'m')}
+for(let i=0;i<=3;i++){let x=x0+(x1-x0)*i/3; element('text',{x,y:y1+22,fill:'#a4bcd2','font-size':12,'text-anchor':'middle'},i*5+' '+tt('chartMinuteUnit'))}
 for(let k of ['us','tr']){let pts=[];for(let t=0;t<=S.duration;t+=2){const q=data[k].snap[t].q;pts.push(`${x0+(x1-x0)*t/S.duration},${y1-(y1-y0)*(q[0]+q[1])/maxQ}`)}element('polyline',{points:pts.join(' '),fill:'none',stroke:k==='us'?'#54a8ff':'#f08c79','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'})}
 let mark=element('line',{x1:x0,y1:y0,x2:x0,y2:y1,stroke:'#e4f0ff','stroke-width':2,opacity:.65,id:'chartMarker'});chart.dataset.x0=x0;chart.dataset.x1=x1}
 function drawIndicator(t){let x=Number($('qChart').dataset.x0)+(Number($('qChart').dataset.x1)-Number($('qChart').dataset.x0))*t/S.duration;let m=$('chartMarker');m.setAttribute('x1',x);m.setAttribute('x2',x)}
-function loop(ts){if(!lastFrame)lastFrame=ts;const elapsed=Math.min(80,ts-lastFrame)/1000;lastFrame=ts;if(playing){now+=elapsed*S.speed;if(now>=S.duration){now=S.duration;playing=false;put('play','▶ Replay');$('statusDot').style.background='#8baac7'}render()}requestAnimationFrame(loop)}
+function loop(ts){if(!lastFrame)lastFrame=ts;const elapsed=Math.min(80,ts-lastFrame)/1000;lastFrame=ts;if(playing){now+=elapsed*S.speed;if(now>=S.duration){now=S.duration;playing=false;put('play',tt('replay'));$('statusDot').style.background='#8baac7'}render()}requestAnimationFrame(loop)}
 function crosswalks(container){const g=$(container),ns='http://www.w3.org/2000/svg';for(let i=0;i<12;i++){const r=(x,y,w,h)=>{let el=document.createElementNS(ns,'rect');Object.entries({x,y,width:w,height:h,rx:0.8}).forEach(([k,v])=>el.setAttribute(k,v));g.appendChild(el)};r(132+i*11.5,112,7.3,13);r(132+i*11.5,275,7.3,13);r(112,132+i*11.5,13,7.3);r(275,132+i*11.5,13,7.3)}}
 for(let n of ['us','tr'])crosswalks('crosswalks-'+n);
-for(let k of ['demand','green','other','clearance','speed']){$(k).addEventListener('input',()=>{S[k]=Number($(k).value);put(k+'Val',S[k]+(k==='demand'?' vehicles/h':k==='speed'?'×':' s'));if(k==='speed')return;recalc()})}
-for(let [id,d] of [['presetLow',200],['presetMid',400],['presetHigh',650]])$(id).onclick=()=>{S.demand=d;$('demand').value=d;put('demandVal',d+' vehicles/h');recalc()};
-$('play').onclick=()=>{if(now>=S.duration)now=0;playing=!playing;put('play',playing?'⏸ Pause':'▶ Play');$('statusDot').style.background=playing?'#4fda94':'#8baac7';render()};$('reset').onclick=()=>{playing=false;now=0;put('play','▶ Play');render();};$('finish').onclick=()=>{playing=false;now=S.duration;put('play','▶ Replay');render()};$('scrub').addEventListener('input',e=>{playing=false;now=Number(e.target.value);put('play',now>=900?'▶ Replay':'▶ Play');render()});
-recalc();requestAnimationFrame(loop);
+for(let k of ['demand','green','other','clearance','speed']){$(k).addEventListener('input',()=>{S[k]=Number($(k).value);updateReadouts();if(k==='speed')return;recalc()})}
+for(let [id,d] of [['presetLow',200],['presetMid',400],['presetHigh',650]])$(id).onclick=()=>{S.demand=d;$('demand').value=d;updateReadouts();recalc()};
+$('play').onclick=()=>{if(now>=S.duration)now=0;playing=!playing;put('play',playCaption());$('statusDot').style.background=playing?'#4fda94':'#8baac7';render()};$('reset').onclick=()=>{playing=false;now=0;put('play',playCaption());render();};$('finish').onclick=()=>{playing=false;now=S.duration;put('play',playCaption());render()};$('scrub').addEventListener('input',e=>{playing=false;now=Number(e.target.value);put('play',playCaption());render()});
+$('langEn').addEventListener('click',()=>setLanguage('en'));$('langTr').addEventListener('click',()=>setLanguage('tr'));
+applyLanguage();updateReadouts();recalc();requestAnimationFrame(loop);
 })();
 </script>
 </body></html>
